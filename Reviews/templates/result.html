@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Movies Reviews Classifier</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='IMDB_icon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+		<div class="container">
+			<h2 class='container-heading'><span>Movies Reviews Classifier</span></h2>
+	        	<div class='description'>
+				<p>A Machine Learning Web App which is implemented using Flask</p>
+			</div>
+		</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='safe'>Positive Review.</span></h1>
+				<img class="gif" src="https://media.tenor.com/3Y5tIYMfU5AAAAAM/whistle-krishna.gif" alt="happy Image" , height="400" , width="400">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='danger'>Negative Review</span></h1>
+				<img class="gif" src="https://media.tenor.com/Uc67FH0JLXsAAAAM/crying-cry.gif" alt="sad image" , height="400" , width="400">
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+        <div class='footer'>
+            
+            <p class='footer-description'>Made By Batch - 6 of JNTUHCES.</p>
+        </div>
+
+	</body>
+</html>
